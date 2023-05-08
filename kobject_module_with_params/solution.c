@@ -78,4 +78,5 @@ static void __exit example_exit(void) { kobject_put(example_kobj); }
 
 module_init(example_init);
 module_exit(example_exit);
+
 MODULE_LICENSE("GPL");

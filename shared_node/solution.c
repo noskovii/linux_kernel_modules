@@ -47,8 +47,8 @@ static int mychrdev_open(struct inode *inode, struct file *file) {
     printk(KERN_INFO "Opening device %s:\n\n", MYDEV_NAME);
     counter++;
 
-    printk(KERN_INFO, "counter: %d\n", counter);
-    printk(KERN_INFO, "module refcounter: %d\n", module_refcount(THIS_MODULE));
+    printk(KERN_INFO, "Counter: %d\n", counter);
+    printk(KERN_INFO, "Module refcounter: %d\n", module_refcount(THIS_MODULE));
 
     return 0;
 }

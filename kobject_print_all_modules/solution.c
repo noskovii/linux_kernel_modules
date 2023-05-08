@@ -18,7 +18,6 @@ static int my_sys = 0;
 static ssize_t my_sys_show(struct kobject *kobj, struct kobj_attribute *attr,
                            char *buf) {
     struct list_head *module_head;
-
     struct list_head *listptr;
     struct module *entry;
 
@@ -95,4 +94,5 @@ static void __exit example_exit(void) { kobject_put(example_kobj); }
 
 module_init(example_init);
 module_exit(example_exit);
+
 MODULE_LICENSE("GPL");

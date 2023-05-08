@@ -30,10 +30,12 @@ static ssize_t my_sys_store(struct kobject *kobj, struct kobj_attribute *attr,
 
 static struct kobj_attribute my_sys_attribute =
     __ATTR(my_sys, 0664, my_sys_show, my_sys_store);
+
 static struct attribute *attrs[] = {
     &my_sys_attribute.attr,
     NULL,
 };
+
 static struct attribute_group attr_group = {
     .attrs = attrs,
 };
@@ -56,4 +58,5 @@ static void __exit example_exit(void) { kobject_put(example_kobj); }
 
 module_init(example_init);
 module_exit(example_exit);
+
 MODULE_LICENSE("GPL");
